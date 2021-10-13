@@ -1,25 +1,22 @@
-import React from 'react';
+import React from "react";
 import {TouchableOpacityProps} from 'react-native';
-import {Container, Touchable, Text} from './button.styles';
+import { Touchable, Text } from "./button.styles";
 
 interface ButtonProps extends TouchableOpacityProps {
-  isDisabled?: boolean;
-  color: string;
-  children: string;
+    color: string;
+    children: string;
 }
 
-const Button: React.ElementType<ButtonProps> = ({
-  isDisabled = false,
-  color,
-  children,
-  ...props
-}: ButtonProps) => {
-  return (
-    <Container>
-      <Touchable isDisabled={isDisabled} color={color} {...props}>
-        <Text isDisabled={isDisabled}>{children}</Text>
-      </Touchable>
-    </Container>
-  );
-};
+const Button: React.FC<ButtonProps> = ({
+    color,
+    children,
+    onPress,
+    ...props
+}) => {
+    return (
+        <Touchable color={color} onPress={onPress} {...props}>
+            <Text> {children} </Text>
+        </Touchable>
+    )
+}
 export default Button;

@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Alert
 } from 'react-native';
+import Button from './button'
 export interface IItem {
   item: string;
   quantity: string;
@@ -53,9 +54,7 @@ const AddItem: React.FC<Props> = ({shoppingList, setShoppingList}) => {
             setQuantity(q);
           }}
         />
-        <TouchableOpacity style={styles.addItemButton} onPress={addItem}>
-          <Text style={styles.buttonText}>Add Item</Text>
-        </TouchableOpacity>
+        <Button color="#eb8634" onPress={addItem}>Add Item</Button>
       </View>
     </View>
   );
