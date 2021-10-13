@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, View, FlatList} from 'react-native';
-import Header from './src/components/Header';
+import Header from './src/components/Atoms/Header';
 import AddItem, {IItem} from './src/components/AddItem';
 import Item from './src/components/Item';
 const App = () => {
   const [shoppingList, setShoppingList] = useState<IItem[]>([]);
   return (
     <SafeAreaView style={styles.container}>
-      <Header title="Shopping List" />
+      <Header> Header </Header>
       <View style={styles.contentWrapper}>
         <AddItem
           setShoppingList={setShoppingList}
