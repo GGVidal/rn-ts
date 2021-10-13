@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Alert
 } from 'react-native';
-import Button from './button'
+import Button from './Atoms/Button'
 export interface IItem {
   item: string;
   quantity: string;
