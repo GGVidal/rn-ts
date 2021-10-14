@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {IItem} from './AddItem';
+import {IItem} from '../components/Molecules/AddItem';
 const Item: React.FC<IItem> = ({item, quantity}) => {
   return (
     <View style={styles.item}>
