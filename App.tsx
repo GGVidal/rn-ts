@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, View, FlatList} from 'react-native';
 import Header from './src/components/Atoms/Header';
-import AddItem, {IItem} from './src/components/AddItem';
+import AddItem, {IItem} from './src/components/Molecules/AddItem';
 import Item from './src/components/Item';
 const App = () => {
   const [shoppingList, setShoppingList] = useState<IItem[]>([]);
